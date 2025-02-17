@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar Pokémon</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="searchbody">
+
+<div class="search-container">
+    <h1>Buscar Pokémon por Nombre o ID</h1>
+
+    <form action="/pokemon/search" method="post" class="search-form">
+        <input type="text" id="searchTerm" name="searchTerm" placeholder="Escribe un nombre o ID" required class="search-input">
+        <button type="submit" class="search-button">Buscar</button>
+    </form>
+
+    <img src="/images/fondo.png" alt="Pokémon Logo">
+
+</div>
+<footer>
+    <p>&copy; Billy Moreno 2025 Pokémon Viewer. Todos los derechos reservados. </p>
+</footer>
+
+</body>
+</html>

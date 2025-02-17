@@ -1,0 +1,240 @@
+/* General */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que el cuerpo ocupe toda la altura de la pantalla */
+}
+
+/* Header styles for index and search pages */
+/* Personalización de h1 */
+h1 {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    font-size: 2rem; /* Tamaño grande */
+    text-transform: uppercase; /* Convertir el texto a mayúsculas */
+    letter-spacing: 2px; /* Espaciado entre letras */
+    text-align: center;
+    padding: 20px 0;
+    background-color: rgba(76, 175, 80, 0.8); /* Fondo verde semitransparente */
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra para que se destaque */
+    margin: 0 0 20px 0; /* Espaciado abajo */
+}
+
+/* Efecto hover para el h1 */
+h1:hover {
+    transform: scale(1.05); /* Aumentar ligeramente el tamaño cuando se pasa el mouse */
+    transition: transform 0.3s ease-in-out;
+}
+
+
+/* Estilo para la página principal (index.html) */
+.index-body {
+    background: url('/static/images/fondo.png') no-repeat center center fixed; /* Imagen de fondo */
+    background-size: cover; /* Asegura que la imagen cubra toda la pantalla */
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+}
+
+/* Fondo de la página de búsqueda (searchFor.html) */
+.searchbody {
+    background: url('/static/images/fondo.png') no-repeat center center fixed; /* Imagen de fondo */
+    background-size: cover; /* Asegura que la imagen cubra toda la pantalla */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.index-container {
+    background-color: white;
+    padding: 30px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.index-container img {
+    width: 100%;
+    max-width: 200px;
+    margin-bottom: 20px;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Estilo para los botones */
+.main-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 25px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 200px;
+    margin: 0 auto;
+}
+
+.main-button:hover {
+    background-color: #45a049;
+}
+
+/* Estilo para la página de búsqueda (searchFor.html) */
+.searchbody {
+    background: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.search-container {
+    background-color: white;
+    padding: 30px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+}
+
+.search-container img {
+    width: 100%;
+    max-width: 150px;
+    margin-bottom: 20px;
+}
+
+.search-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.search-input {
+    padding: 12px;
+    font-size: 16px;
+    width: 250px;
+    margin: 0 auto;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    transition: border-color 0.3s;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: #4CAF50;
+}
+
+.search-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-button:hover {
+    background-color: #45a049;
+}
+
+.back-button {
+    background-color: #008CBA; /* Azul */
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.back-button:hover {
+    background-color: #006F8E; /* Azul más oscuro */
+}
+
+/* Estilo para el pie de página */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    position: relative;
+    width: 100%;
+    font-size: 14px;
+    margin-top: auto;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Estilos para las tablas de resultados (searchResults.html y viewAllPokemons.html) */
+/* Estilo para las tablas */
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse; /* Elimina los espacios entre las celdas */
+}
+
+th, td {
+    border: 2px solid #333; /* Borde negro para las celdas */
+    padding: 12px;
+    text-align: left;
+    background-color: #fff; /* Fondo blanco para las celdas */
+    color: #333; /* Color de texto oscuro */
+}
+
+th {
+    background-color: #4CAF50; /* Fondo verde para el encabezado */
+    color: white;
+    font-size: 18px; /* Tamaño de texto mayor para los encabezados */
+    text-transform: uppercase; /* Hace los encabezados en mayúsculas */
+}
+
+td {
+    font-size: 16px; /* Texto más pequeño en las celdas */
+}
+
+td:hover {
+    background-color: #f1f1f1; /* Efecto hover para las celdas */
+    cursor: pointer; /* Cursor en forma de mano al pasar por encima */
+}
+
+/* Estilo para las imágenes dentro de las celdas */
+td img {
+    width: 100px;
+    height: auto;
+    border-radius: 5px; /* Bordes redondeados en las imágenes */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra sutil para las imágenes */
+}
+
+/* Estilo de las líneas de las tablas con bordes */
+table, th, td {
+    border: 1px solid #333; /* Líneas de borde negro */
+}
+
+/* Efecto hover en la fila de la tabla */
+tr:hover {
+    background-color: #f5f5f5; /* Fondo gris claro cuando se pasa el ratón sobre la fila */
+}
+
+

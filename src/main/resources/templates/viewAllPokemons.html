@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ver Todos los Pokémon</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<h1>Ver Todos los Pokémon</h1>
+
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Altura</th>
+        <th>Peso</th>
+        <th>Habilidades</th>
+        <th>Imagen</th>
+    </tr>
+    </thead>
+    <tbody>
+    <!-- Thymeleaf recorrerá la lista de pokemons -->
+    <tr th:each="pokemon : ${pokemons}">
+        <td th:text="${pokemon.id}"></td>
+        <td th:text="${pokemon.name}"></td>
+        <td th:text="${pokemon.height}"></td>
+        <td th:text="${pokemon.weight}"></td>
+        <td>
+            <ul>
+                <li th:each="ability : ${pokemon.abilities}" th:text="${ability.ability.name}"></li>
+            </ul>
+        </td>
+        <td>
+            <img th:src="${pokemon.sprites.frontDefault}" alt="Imagen de Pokémon">
+        </td>
+    </tr>
+    </tbody>
+</table>
+<footer>
+    <p>&copy; Billy Moreno 2025 Pokémon Viewer. Todos los derechos reservados. </p>
+</footer>
+
+</body>
+</html>

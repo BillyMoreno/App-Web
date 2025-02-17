@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados de la Búsqueda</title>
+    <link rel="stylesheet" href="/css/style.css">
+
+</head>
+<body>
+
+<h1>Resultados de la Búsqueda</h1>
+<a href="/pokemon/searchFor">
+    <button class="back-button">Volver a la búsqueda</button>
+</a>
+
+<!-- Verificar si no hay resultados -->
+<div th:if="${#lists.isEmpty(pokemons)}">
+    <p>No se encontraron Pokémon.</p>
+</div>
+
+<!-- Verificar si hay resultados -->
+<div th:if="${not #lists.isEmpty(pokemons)}">
+    <p>Se encontraron <span th:text="${#lists.size(pokemons)}"></span> Pokémon.</p>
+
+    <table>
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Altura</th>
+            <th>Peso</th>
+            <th>Imagen</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="pokemon : ${pokemons}">
+            <td th:text="${pokemon.id}"></td>
+            <td th:text="${pokemon.name}"></td>
+            <td th:text="${pokemon.height}"></td>
+            <td th:text="${pokemon.weight}"></td>
+            <td>
+                <img th:src="${pokemon.sprites.frontDefault}" alt="Imagen de Pokémon">
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+
+</div>
+
+
+<footer>
+    <p>&copy; Billy Moreno 2025 Pokémon Viewer. Todos los derechos reservados. </p>
+</footer>
+
+</body>
+</html>
